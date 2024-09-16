@@ -1,0 +1,11 @@
+# Base image
+FROM php:7.4-apache
+
+# Install MySQL and required PHP extensions
+RUN docker-php-ext-install mysqli pdo pdo_mysql
+
+# Copy over the app files
+COPY ./app /var/www/html/
+
+# Expose the web port
+EXPOSE 80

@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  sql_injection:
+    build: ./SQL_INJECTION
+    ports:
+      - "8081:80"
+
+  curl_challenge:
+    build: ./CURL
+    ports:
+      - "8082:5000"
+
+  netcat_challenge:
+    build: ./NETCAT_NMAP
+    ports:
+      - "8083:8080"
