@@ -29,8 +29,8 @@ resource "digitalocean_droplet" "ctf_droplet" {
     inline = [
       "apt-get update && apt-get install docker.io -y",
       "apt-get install docker-compose -y",
-      "git clone https://github.com/your-challenge-repo",
-      "cd your-challenge-repo && docker-compose up -d"
+      "git clone https://github.com/Famington/ctf_challenges",
+      "cd ctf_challenges && docker-compose up -d"
     ]
   }
 }
