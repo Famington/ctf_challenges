@@ -1,7 +1,3 @@
 FROM alpine
-
-# Install netcat and nmap
-RUN apk add --no-cache netcat-openbsd nmap
-
-# Start the service on a non-standard port
+RUN apk add --no-cache netcat-openbsd
 CMD echo "Flag: ctf{nc_and_nmap_win}" | nc -l -p 8080

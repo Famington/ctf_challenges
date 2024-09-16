@@ -38,16 +38,3 @@ resource "digitalocean_droplet" "ctf_droplet" {
 output "ctf_ip" {
   value = digitalocean_droplet.ctf_droplet.ipv4_address
 }
-
-# Declare your variables here
-variable "do_token" {
-  description = "DigitalOcean API Token"
-}
-
-variable "ssh_key" {
-  description = "Your SSH public key"
-}
-
-variable "ssh_private_key" {
-  description = "Your SSH private key path"
-}
