@@ -1,17 +1,27 @@
-version: '3'
+version: '3.8'
 
 services:
-  sql_injection:
-    build: ./SQL_INJECTION
+  wget_challenge:
+    build: ./wget_challenge
     ports:
-      - "8081:80"
+      - "5000:5000"
+    networks:
+      - challenge-network
 
   curl_challenge:
     build: ./CURL
     ports:
-      - "8082:5000"
+      - "5001:5000"
+    networks:
+      - challenge-network
 
   netcat_challenge:
     build: ./NETCAT_NMAP
     ports:
-      - "8083:8080"
+      - "5002:5000"
+    networks:
+      - challenge-network
+
+networks:
+  challenge-network:
+    driver: bridge
